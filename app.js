@@ -1,21 +1,11 @@
-let el = function (element) {
-  if (element.charAt(0) === "#") {
-    // If it contains an ID
-    return document.querySelector(element); // returns single element
-  }
-
-  //else returns a nodelist
-  return document.querySelectorAll(element);
-};
-
 // Variables
 
-let viewer = el("#viewer");
-let equals = el("#equals");
 const nums = document.querySelectorAll(".num");
 const ops = document.querySelectorAll(".operator");
 const clear = document.querySelector(".clear");
 const keyPress = document.querySelector("body");
+let viewer = document.querySelector("#viewer");
+let equals = document.querySelector("#equals");
 let currNum = "";
 let oldNum = "";
 let resultNum;
@@ -24,12 +14,12 @@ let operator;
 // When the number is clicked, get the current number
 
 let setNum = function () {
+  // If a result was displayed, reset number
   if (resultNum) {
-    // If a result was displayed, reset number
     currNum = this.getAttribute("data-num");
     resultNum = "";
-  } else {
     // else add previous digit to string
+  } else {
     currNum += this.getAttribute("data-num");
   }
   viewer.innerHTML = currNum;

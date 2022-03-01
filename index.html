@@ -11,9 +11,14 @@
   <body>
     <h1>JavaScript Calculator</h1>
     <div id="calculator" class="calculator">
-    <button id="clear" class="clear">CE</button>
-    <div id="viewer" class="viewer">0</div>
-    
+      <section id="viewer" class="viewer">0</section>
+      <div class="button-area">
+      <button id="clear" class="on">ON</button>
+      <button id="clear" class="off">OFF</button>
+      <button id="clear" class="clear">CE</button>
+      <button id="clear" class="operator percentage">%</button>
+
+
     <button class="num" data-num="7">7</button>
     <button class="num" data-num="8">8</button>
     <button class="num" data-num="9">9</button>
@@ -22,7 +27,7 @@
     <button class="num" data-num="4">4</button>
     <button class="num" data-num="5">5</button>
     <button class="num" data-num="6">6</button>
-    <button class="operator" data-operator="subtract">-</button>
+    <button id="substract" class="operator" data-operator="subtract">-</button>
 
 
     <button class="num" data-num="1">1</button>
@@ -34,6 +39,7 @@
     <button class="num" data-num=".">.</button>
     <button id="equals" class="equals" data-result="">=</button>
     <button class="operator" data-operator="divide">÷</button>
+  </div>
     </div>
     <script src="./app.js"></script>
   </body>
